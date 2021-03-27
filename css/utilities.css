@@ -8,18 +8,18 @@
 .card {
   background-color: #fff;
   color: #333;
-  border-radius: 2rem;
+  border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding: 20px;
   margin: 10px;
 }
 .btn {
   background-color: var(--primary-color);
   display: inline-block;
   cursor: pointer;
-  padding: 1rem 3rem;
+  padding: 10px 3px;
   border: none;
-  border-radius: 1rem;
+  border-radius: 5px;
   color: #fff;
 }
 .btn-outline {
@@ -27,8 +27,9 @@
   border: 1px solid white;
 }
 .btn:hover {
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
+/* Background and Coloured buttons */
 .bgcolor-primary,
 .btn-primary {
   background-color: var(--primary-color);
@@ -62,18 +63,38 @@
 .text-center {
   text-align: center;
 }
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
 /* Text sizes */
+.lead {
+  font-size: 20px;
+}
 .sm {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .md {
   font-size: 2rem;
 }
 .lg {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .xl {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 /* Alert */
 .alert {
@@ -83,7 +104,7 @@
   margin: 15px 0;
 }
 .alert i {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .alert-success {
   background-color: var(--success-color);
@@ -93,39 +114,7 @@
   background-color: var(--error-color);
   color: #fff;
 }
-/* Animations */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes slideInFromDown {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -135,7 +124,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -148,32 +137,16 @@
   margin: 1rem 0;
 }
 .my-2 {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 .my-3 {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 .my-4 {
-  margin: 4rem 0;
+  margin: 3rem 0;
 }
 .my-5 {
-  margin: 5rem 0;
-}
-
-.mx-1 {
-  margin: 0 1rem;
-}
-.mx-2 {
-  margin: 0 2rem;
-}
-.mx-3 {
-  margin: 0 3rem;
-}
-.mx-4 {
-  margin: 0 4rem;
-}
-.mx-5 {
-  margin: 0 5rem;
+  margin: 4rem 0;
 }
 
 .m-1 {
@@ -239,3 +212,4 @@
 .p-5 {
   padding: 4rem;
 }
+
