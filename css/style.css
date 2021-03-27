@@ -1,5 +1,4 @@
 :root {
-  font-size: 10px;
   --primary-color: #047aed;
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
@@ -14,27 +13,23 @@
 }
 body {
   font-family: "Lato", sans-serif;
-  font-size: 1.6rem;
   line-height: 1.6;
   color: #333;
 }
 
-h1 {
-  font-size: 4rem;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 10px 0px;
-}
+h1,
 h2 {
   font-weight: 300;
   line-height: 1.2;
   margin: 10px 0px;
 }
+
 p {
   margin: 10px 0px;
 }
 a {
   text-decoration: none;
+  color: #333;
 }
 ul {
   list-style-type: none;
@@ -54,7 +49,6 @@ pre {
 }
 /* Navbar */
 .navbar {
-  width: 100%;
   background-color: var(--primary-color);
   color: #fff;
   height: 70px;
@@ -68,7 +62,7 @@ pre {
 }
 .navbar a {
   margin: 0 5px;
-  padding: 0 10px;
+  padding: 10px;
   color: #fff;
 }
 .navbar a:hover {
@@ -82,42 +76,44 @@ pre {
   position: relative;
 }
 .showcase h1 {
-  font-size: 3.7rem;
+  font-size: 40px;
 }
 .showcase p {
   margin: 20px 0px;
 }
 .showcase .grid {
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 55% auto;
   overflow: visible;
-  gap: 3rem;
+  gap: 30px;
 }
 .showcase-form {
   position: relative;
   top: 60px;
-  height: 380px;
+  height: 350px;
   width: 400px;
-  padding: 4rem;
+  padding: 40px;
   z-index: 100;
+  justify-self: flex-end;
 }
 .showcase-form .form-control {
-  margin: 3rem 0;
-  padding: 0.5rem;
-}
-.showcase-form h2 {
-  padding: 0.5rem;
-  font-size: 2.8rem;
-  font-weight: bolder;
+  margin: 30px 0;
 }
 .showcase-form input[type="text"],
 .showcase-form input[type="email"] {
-  outline: none;
   border: 0;
-  border-bottom: 1px solid rgb(177, 174, 174);
+  border-bottom: 1px solid #b4becb;
   width: 100%;
-  font-size: 1.4rem;
+  padding: 3px;
+  font-size: 14px;
+}
+.showcase-form input[type="submit"] {
+  padding: 10px;
+}
+.showcase-form input:focus {
+  outline: none;
 }
 
+.showcase::before,
 .showcase::after {
   content: "";
   position: absolute;
@@ -127,6 +123,9 @@ pre {
   height: 100px;
   background-color: #fff;
   transform: skewY(-2deg);
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
 }
 .showcase-text {
   animation: slideInFromLeft 1s ease-in;
@@ -140,15 +139,14 @@ pre {
   animation: slideInFromDown 1s ease-in;
 }
 .stats-heading {
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
 }
 .stats .grid h3 {
-  font-size: 25px;
+  font-size: 35px;
 }
 .stats .grid p {
   font-size: 20px;
-  color: var(--primary-color);
   font-weight: bold;
 }
 /* Cli */
@@ -164,25 +162,21 @@ pre {
 .cloud .grid {
   grid-template-columns: 4fr 3fr;
 }
-.cloud .grid .lead {
-  font-size: 2rem;
-  color: var(--light-color);
-}
 /* Languages */
 .languages .flex {
   flex-wrap: wrap;
 }
-.languages {
+.languages .card {
   text-align: center;
-  margin: 18px 20px 40px 0;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
 }
-.languages h2 {
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  font-weight: bolder;
+.languages .card h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 .languages .card:hover {
-  transform: translateY(-1rem);
+  transform: translateY(-15px);
 }
 /* Features */
 .features-head img {
@@ -193,30 +187,27 @@ pre {
   width: 300px;
   justify-self: flex-end;
 }
-.features-sub-head h1 {
-  font-weight: 550;
-  font-size: 2.7rem;
-}
+
 .features-main .card > i {
   margin-right: 20px;
 }
+.features-main .grid {
+  padding: 30px;
+}
 .features-main .card:first-child {
   grid-column: 1 / span 3;
-  margin-top: 30px;
 }
 .features-main .card:nth-child(2) {
   grid-column: 1 / span 2;
-}
-.features-main .card:nth-child(4),
-.card:nth-child(5),
-.card:nth-child(6) {
-  margin-bottom: 30px;
 }
 
 /* Docs */
 .docs-head img {
   width: 200px;
   justify-self: flex-end;
+}
+.docs-main h3 {
+  margin: 20px 0;
 }
 .docs-main .grid {
   grid-template-columns: 1fr 2fr;
@@ -235,29 +226,63 @@ pre {
   font-weight: bold;
 }
 /* Footer */
-.footer {
-  padding-bottom: 40px;
-}
+
 .footer .links a:hover {
   border-bottom: 1px solid white;
 }
-.social i {
-  margin: 1rem;
+.footer .social a {
+  margin: 10px 0;
 }
 .social i:hover {
   transform: scale(1.2);
 }
+.footer .links a {
+  padding-bottom: 2px;
+}
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromDown {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /* Media Queries */
 
-/* For Tablets */
+/* For Tablets and Under */
 @media (max-width: 768px) {
+  .grid,
   .showcase .grid,
   .cli .grid,
   .stats .grid,
   .cloud .grid,
-  .features-head .grid,
-  .features-main .grid,
-  .features-sub-head .grid {
+  .docs-main .grid,
+  .features-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -267,20 +292,25 @@ pre {
   .showcase-text {
     text-align: center;
     margin-top: 40px;
+    animation: slideInFromTop 1s ease-in;
   }
   .showcase-form {
     justify-self: center;
+    margin: auto;
+    animation: slideInFromBottom 1s ease-in;
   }
   .cli .grid > *:first-child {
     grid-column: 1;
     grid-row: 1;
   }
   .features-head,
-  .features-sub-head {
+  .features-sub-head,
+  .docs-head {
     text-align: center;
   }
   .features-head img,
-  .features-sub-head img {
+  .features-sub-head img,
+  .docs-head img {
     justify-self: center;
   }
   .features-main .card:first-child,
@@ -289,23 +319,18 @@ pre {
   }
 }
 /* Mobiles */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .navbar {
-    height: 90px;
+    height: 110px;
   }
   .navbar .flex {
     flex-direction: column;
   }
   .navbar ul {
     background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
   }
-  .features-head {
-    padding-top: 30px;
-  }
-  .features-head h1 {
-    font-size: 2.7rem;
-  }
-  .features-head img {
-    width: 150px;
+  .showcase-form {
+    width: 300px;
   }
 }
