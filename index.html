@@ -36,6 +36,7 @@
                     to try a demo of our platform</p>
                 <a href="features.html" class="btn btn-outline">Read more</a>
             </div>
+
             <div class="showcase-form card">
                 <h2>Request a Demo</h2>
                 <form name="contact" netlify-honeypot="bot-field" method="POST" data-netlify="true">
@@ -52,9 +53,8 @@
                     <div class="form-control">
                     <input type="text" name="cname" placeholder="Company Name" required>
                     </div>
-                    <div >
                     <input type="submit" name="submit" value="Send" class="btn btn-primary">
-                    </div>
+                    
                 </form>
             </div>
         </div>
@@ -86,7 +86,7 @@
     </section>
     <!-- Cli -->
     <section class="cli">
-        <div class="container grid  text-center">
+        <div class="container grid ">
             <img src="./images/cli.png" alt="npm command for easy download">
             <div class="card">
                 <h3>Easy to use,crossplatform Cli</h3>
@@ -97,19 +97,19 @@
         </div>
     </section>
     <!-- Cloud -->
-    <section class="cloud bgcolor-primary my-4 py-2">
+    <section class="cloud bgcolor-primary my-2  py-2">
         <div class="container grid  ">
             <div class="text-center">
-                <h2 class="lg my-1">Extreme Cloud Hosting</h2>
+                <h2 class="lg">Extreme Cloud Hosting</h2>
                 <p class="lead my-1">Cloud hosting like you've never seen. Fast, efficient and scalable</p>
-                <a href="features.html" class="btn btn-dark my-2">Read More</a>
+                <a href="features.html" class="btn btn-dark ">Read More</a>
             </div>
             <img src="./images/cloud.png" alt="Cloud interface diagram">
         </div>
     </section>
     <!-- Languages -->
     <section class="languages">
-        <h2>Supported Languages</h2>
+        <h2 class="md text-center my-2">Supported Languages</h2>
         <div class="container flex">
             <div class="card">
                 <h4>Node.js</h4>
@@ -142,18 +142,20 @@
         </div>
     </section>
     <!-- Footer -->
-    <section class="footer bgcolor-dark py-5">
+    <footer class="footer bgcolor-dark py-5">
         <div class="container grid grid-3">
             <div>
                 <h1>Loruki</h1>
                 <p>Copyright &copy; 2020</p>
             </div>
             <div class="links">
-                <ul>
+               <nav> 
+                   <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="features.html">Features</a></li>
                     <li><a href="docs.html">Documentation</a></li>
-                </ul>
+                    </ul>
+                </nav>
             </div>
             <div class="social">
                 <a href="https://github.com/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
@@ -162,6 +164,6 @@
                 <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
             </div>
         </div>
-    </section>
+    </footer>
 </body>
 </html>
