@@ -289,9 +289,9 @@ pre {
   }
 }
 /* Mobiles */
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .navbar {
-    height: 110px;
+    height: 90px;
   }
   .navbar .flex {
     flex-direction: column;
@@ -300,12 +300,12 @@ pre {
     background: rgba(0, 0, 0, 0.1);
   }
   .features-head {
-    padding-top: 40px;
+    padding-top: 30px;
   }
   .features-head h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
   .features-head img {
-    width: 170px;
+    width: 150px;
   }
 }
